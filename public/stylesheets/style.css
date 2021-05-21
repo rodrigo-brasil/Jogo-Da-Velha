@@ -114,4 +114,5 @@ section{
 
 .score span {
   padding: 0 1rem;
+  text-decoration: underline;
 }
