@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/stylesheets/style.css">
+    <script src="./public/javascripts/script.js" defer></script>
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <div class="score">
+        <div>
+            <span>X = <span class="x">0</span></span>
+        </div>
+        <div>
+            <span>O = <span class="o">0</span></span>
+        </div>
+    </div>
+    <section>
+        <div class="board">
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+            <div class="slot open"></div>
+        </div>
+    </section>
+    <div id="modal" class="modal">
+        <div id="winning" class="modal-content">
+            <p id="message">Ganhou</p>
+            <button class="restart" onclick=restart()>Reiniciar</button>
+        </div> <!-- modal-content -->
+    </div>
+
+</body>
+</html>

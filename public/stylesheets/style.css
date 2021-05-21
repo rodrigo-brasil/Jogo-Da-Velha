@@ -1,0 +1,117 @@
+*{
+  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgray;
+}
+
+section{
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+}
+
+.board{
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+
+.slot{
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15em;
+  overflow: hidden;
+}
+
+.slot.open{
+  cursor: pointer;
+}
+
+.slot.lock{
+  cursor: not-allowed;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 10;
+  left: 0;
+  top: 0;
+}
+
+.modal-content{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30%;
+  height: 15%;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-content > p{
+  text-align: center;
+  color: white;
+}
+
+.modal-content > button{
+  color: Black;
+  font-size: xx-large;
+  padding: 0.5em 1em;
+  margin-top: 2em;
+  border-radius: 0.2em;
+  border-width: 0;
+
+}
+.modal-content > button:hover{
+  color: white;
+  background-color: black;
+  font-size: xx-large;
+  padding: 0.5em 1em;
+  margin-top: 2em;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+
+.modal #message{
+  font-size: 4em;
+}
+
+.modal .winner::first-letter{
+  color: gold;
+  font-size: 2em;
+}
+
+.score{
+  display: flex;
+  margin: 3rem auto;
+  justify-content: center;
+  gap: 25%;
+  font-size: 2rem;
+}
+
+
+.score span {
+  padding: 0 1rem;
+}
