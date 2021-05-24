@@ -111,8 +111,14 @@ section{
   font-size: 2rem;
 }
 
+.score div {
+  padding: 0.3rem 1rem;
+}
+
+.score div {
+  border: solid black 2px;
+}
 
 .score span {
-  padding: 0 1rem;
-  text-decoration: underline;
+  font-weight: bold;
 }

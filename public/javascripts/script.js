@@ -1,4 +1,6 @@
 let turn = 0;
+let xScore =0;
+let oScore = 0;
 
 const slots = document.getElementsByClassName('slot');
 const openSlots = document.getElementsByClassName('open');
@@ -44,6 +46,7 @@ function winner(){
     document.getElementById('modal').style.display = 'block';
     document.getElementById('message').innerHTML =  getPlyer(turn) + ' Ganhou!';
     document.getElementById('message').classList.add('winner');
+    score();
 }
 
 function tie(){
@@ -55,6 +58,12 @@ function restart(){
     document.getElementById('modal').style.display = 'none';
     clearSlot();
     turn =0;
+}
+
+function score(){
+    turn % 2 ==0 ? xScore++ : oScore++;
+    document.getElementById('oScore').innerText = oScore;
+    document.getElementById('xScore').innerText = xScore;
 }
 
 function checkWinner(){
