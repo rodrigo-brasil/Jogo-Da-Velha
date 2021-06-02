@@ -51,6 +51,7 @@ function winner(){
 
 function tie(){
     document.getElementById('modal').style.display = 'block';
+    document.getElementById('message').classList.remove('winner');
     document.getElementById('message').innerHTML =  'Empate!'
 }
 
@@ -91,7 +92,7 @@ function checkWinner(){
         return winner();
     }
     
-    else{
+    if(turn == 8){
         return tie();
     }
 }
