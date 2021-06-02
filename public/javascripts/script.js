@@ -74,26 +74,26 @@ function checkWinner(){
        result.push(array.slice(index*3,index*3+3));
     }
 
-    if(turn == 8){
-        return tie();
-    }
     
     for (let i = 0; i < 3; i++) {
         if(result[i][0] == player && result[i][1] == player &&result[i][2] == player){
-           return winner();
+            return winner();
         }
         if(result[0][i] == player && result[1][i] == player &&result[2][i] == player){
             return winner();
         }      
     }
-
+    
     if(result[0][0] == player && result[1][1] == player&&result[2][2] == player){
         return  winner();
     }
     if(result[0][2] == player && result[1][1] == player &&result[2][0] == player){
         return winner();
     }
-
+    
+    else{
+        return tie();
+    }
 }
 
 Array.from(slots).forEach(e=> e.addEventListener('mouseover',showMouseOver));
