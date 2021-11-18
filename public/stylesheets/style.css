@@ -5,36 +5,33 @@
 }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: lightgray;
 }
 
 section{
-  width: 800px;
-  height: 800px;
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
   background-color: gray;
+  min-height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
 }
 
 .board{
-  width: calc(100% + 5px);
-  height: calc(100% + 5px);
+  width: 90%;
+  max-width: 600px;
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(3,1fr);
 }
 
 .slot{
+  width: 100%;
   background-color: lightgray;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 15em;
   overflow: hidden;
+  aspect-ratio: 1;
 }
 
 .slot.open{
@@ -63,7 +60,6 @@ section{
   transform: translate(-50%,-50%);
   width: 30%;
   height: 15%;
-  border: solid 1px black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,8 +100,9 @@ section{
 }
 
 .score{
+  height: 70px;
   display: flex;
-  margin: 3rem auto;
+  padding: .5rem;
   justify-content: center;
   gap: 25%;
   font-size: 2rem;
@@ -116,7 +113,7 @@ section{
 }
 
 .score div {
-  border: solid black 2px;
+  border-bottom: solid black 2px;
 }
 
 .score span {
